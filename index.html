@@ -25,7 +25,7 @@
   <!-- Hero -->
   <section id="hero">
     <div class="container">
-      <p class="hero-eyebrow">Infrastructure Engineer</p>
+      <p class="hero-eyebrow">Aspiring Infrastructure Engineer</p>
       <h1 class="hero-name">
         西ノ原 <span>希空</span>
       </h1>
@@ -46,16 +46,18 @@
           <p class="section-label">About</p>
           <h2 class="section-title">自己紹介</h2>
           <p>
-            インフラエンジニア志望の学生です。AWS EC2上にUbuntu Linuxサーバーを構築し、
-            Nginx・Certbotを使ったHTTPS化（TLS/SSL）を自力で実現しました。
+            ITやシステムの基盤を支えるネットワーク・インフラに興味を持ち、
+            「社会に必要とされるエンジニア」を目指して日々勉強しています。
           </p>
           <p>
-            DockerとGitHub Actionsを組み合わせた自動デプロイパイプラインの構築を実践しており、
-            「コードを書いたら即本番反映」の仕組みをゼロから作り上げることが得意です。
+            学校の実習環境（Cisco実機・WLC）でVLAN・ACL・OSPF・HSRPなどを
+            実際に構築し、放課後も残って手を動かし続けています。
+            几帳面で心配性な性格から設定を何度も確認する習慣がついており、
+            それがインフラ構築の細かさと相性が良いと感じています。
           </p>
           <p>
-            ネットワークやセキュリティの基礎を大切にしながら、実際に手を動かして
-            学び続けることをモットーにしています。
+            「疎通確認が取れた瞬間の達成感」が好きで、
+            構築することそのものが楽しいと思えるタイプです。
           </p>
           <div class="about-badges">
             <span class="badge">基本情報技術者 (FE)</span>
@@ -196,9 +198,90 @@
             <span class="work-tag">Nginx</span>
           </div>
         </div>
+
+        <!-- Packet Tracer card -->
+        <div class="work-card">
+          <div class="work-slideshow" data-index="0">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <div class="slide-track">
+              <img src="images/packet1.png" alt="Packet Tracer 設計 1">
+              <img src="images/packet2.png" alt="Packet Tracer 設計 2">
+            </div>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-header">
+            <div class="work-title">Packet Tracerネットワーク設計</div>
+          </div>
+          <p class="work-desc">
+            VLANやルーティングをPacket Tracerで設計・検証
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">Packet Tracer</span>
+            <span class="work-tag">VLAN</span>
+            <span class="work-tag">ルーティング</span>
+          </div>
+        </div>
+
+        <!-- 実機ネットワーク構築 card -->
+        <div class="work-card">
+          <div class="work-slideshow" data-index="0">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <div class="slide-track">
+              <img src="images/network1.png" alt="実機ネットワーク 1">
+              <img src="images/network2.png" alt="実機ネットワーク 2">
+              <img src="images/network3.png" alt="実機ネットワーク 3">
+            </div>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-header">
+            <div class="work-title">実機ネットワーク構築</div>
+          </div>
+          <p class="work-desc">
+            Cisco実機を使いVLAN・ACL・OSPF・HSRP・WLCなどを構築。
+            放課後も残って実際に手を動かした環境構築の記録。
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">Cisco</span>
+            <span class="work-tag">VLAN</span>
+            <span class="work-tag">OSPF</span>
+            <span class="work-tag">HSRP</span>
+            <span class="work-tag">ACL</span>
+            <span class="work-tag">WLC</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.work-slideshow').forEach(function(slideshow) {
+      var imgs = slideshow.querySelectorAll('.slide-track img');
+      var dots = slideshow.querySelectorAll('.dot');
+      var idx = 0;
+
+      function show(n) {
+        idx = (n + imgs.length) % imgs.length;
+        imgs.forEach(function(img, i) { img.style.display = i === idx ? 'block' : 'none'; });
+        dots.forEach(function(dot, i) { dot.classList.toggle('active', i === idx); });
+      }
+
+      show(0);
+
+      slideshow.querySelector('.slide-prev').addEventListener('click', function() { show(idx - 1); });
+      slideshow.querySelector('.slide-next').addEventListener('click', function() { show(idx + 1); });
+      dots.forEach(function(dot, i) { dot.addEventListener('click', function() { show(i); }); });
+    });
+  </script>
 
   <!-- Contact -->
   <section id="contact">
