@@ -1,20 +1,231 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>西ノ原 希空 - ポートフォリオ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="西ノ原 希空のポートフォリオ。インフラエンジニア志望。AWS・Linux・Docker・GitHub Actionsを使ったサーバー構築・自動化が得意です。">
+  <title>西ノ原 希空 — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>西ノ原 希空</h1>
 
-    <h2>💻 構築実績 (このサイトについて)</h2>
-    <p>このサイトは、AWS EC2上にUbuntu Linuxサーバーを構築し、Nginx、Certbotを使ってHTTPS化（TLS/SSL）を実現したものです。</p>
-    <p>またDOCKERとGITHUBを連携し自動デプロイを実装しています。</p>
-    <h2>🛡️ 取得資格とスキル</h2>
-    <ul>
-        <li>**資格**: 基本情報技術者試験(FE)、Linux Essentials、CCST Networking</li>
-        <li>**スキル**: AWS EC2, Linuxサーバー構築, ネットワーク設計</li>
-        <li>**学習中**: Cisco CCNA (今年度取得予定)</li>
-    </ul>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Nozomi</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Infrastructure Engineer</p>
+      <h1 class="hero-name">
+        西ノ原 <span>希空</span>
+      </h1>
+      <p class="hero-tagline">
+        クラウド・Linux・コンテナで、安定したインフラを設計・構築します。
+        自動化とセキュリティを軸に、手を動かし続けるエンジニアを目指しています。
+      </p>
+      <a href="#contact" class="hero-cta">お問い合わせ →</a>
+    </div>
+    <div class="hero-scroll">SCROLL</div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title">自己紹介</h2>
+          <p>
+            インフラエンジニア志望の学生です。AWS EC2上にUbuntu Linuxサーバーを構築し、
+            Nginx・Certbotを使ったHTTPS化（TLS/SSL）を自力で実現しました。
+          </p>
+          <p>
+            DockerとGitHub Actionsを組み合わせた自動デプロイパイプラインの構築を実践しており、
+            「コードを書いたら即本番反映」の仕組みをゼロから作り上げることが得意です。
+          </p>
+          <p>
+            ネットワークやセキュリティの基礎を大切にしながら、実際に手を動かして
+            学び続けることをモットーにしています。
+          </p>
+          <div class="about-badges">
+            <span class="badge">基本情報技術者 (FE)</span>
+            <span class="badge">Linux Essentials</span>
+            <span class="badge">CCST Networking</span>
+            <span class="badge">CCNA 取得予定</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">取得資格</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">AWS</span>
+            <span class="stat-label">クラウド環境</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">CI/CD</span>
+            <span class="stat-label">自動デプロイ実装済</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">HTTPS</span>
+            <span class="stat-label">TLS/SSL 構築済</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">スキル</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">☁️</span>
+          <div class="skill-name">AWS EC2</div>
+          <div class="skill-desc">EC2インスタンスの起動・設定・セキュリティグループ管理。本番環境の運用経験あり。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐧</span>
+          <div class="skill-name">Ubuntu Linux</div>
+          <div class="skill-desc">サーバー初期設定、ユーザー管理、ファイアウォール設定、サービス管理（systemd）。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <div class="skill-name">Nginx</div>
+          <div class="skill-desc">Webサーバー構築・リバースプロキシ設定。Certbotと連携したHTTPS化。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐳</span>
+          <div class="skill-name">Docker</div>
+          <div class="skill-desc">Dockerfile作成・コンテナビルド・docker-compose。アプリのコンテナ化と運用。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">⚙️</span>
+          <div class="skill-name">GitHub Actions</div>
+          <div class="skill-desc">CI/CDパイプラインの構築。プッシュ→ビルド→デプロイの完全自動化を実現。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔒</span>
+          <div class="skill-name">TLS / SSL</div>
+          <div class="skill-desc">Let's EncryptとCertbotを使ったSSL証明書の取得・自動更新設定。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌍</span>
+          <div class="skill-name">Networking</div>
+          <div class="skill-desc">TCP/IP・DNS・ルーティングの基礎知識。CCST Networking取得。CCNA学習中。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐙</span>
+          <div class="skill-name">Git / GitHub</div>
+          <div class="skill-desc">バージョン管理・ブランチ運用・プルリクエストベースの開発フロー。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works">
+    <div class="container">
+      <p class="section-label">Works</p>
+      <h2 class="section-title">制作物</h2>
+      <div class="works-grid">
+        <div class="work-card">
+          <div class="work-header">
+            <div class="work-title">このポートフォリオサイト</div>
+            <span class="work-link-icon">↗</span>
+          </div>
+          <p class="work-desc">
+            AWS EC2 + Ubuntu + Nginx + Docker + GitHub Actionsで構築した
+            本番運用中のポートフォリオサイト。Let's EncryptによるHTTPS化、
+            GitへのプッシュからEC2への自動デプロイまで一気通貫で実装。
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">AWS EC2</span>
+            <span class="work-tag">Ubuntu</span>
+            <span class="work-tag">Nginx</span>
+            <span class="work-tag">Docker</span>
+            <span class="work-tag">GitHub Actions</span>
+            <span class="work-tag">HTTPS</span>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-header">
+            <div class="work-title">CI/CDパイプライン構築</div>
+            <span class="work-link-icon">↗</span>
+          </div>
+          <p class="work-desc">
+            GitHub Actionsを使って、mainブランチへのプッシュをトリガーに
+            Dockerイメージのビルド・EC2へのSSHデプロイを自動化したパイプライン。
+            ゼロダウンタイムを意識したコンテナ入れ替えフローを実装。
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">GitHub Actions</span>
+            <span class="work-tag">Docker</span>
+            <span class="work-tag">SSH</span>
+            <span class="work-tag">CI/CD</span>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-header">
+            <div class="work-title">Linuxサーバー環境構築</div>
+            <span class="work-link-icon">↗</span>
+          </div>
+          <p class="work-desc">
+            AWS EC2にUbuntu Linuxをインストールし、初期セキュリティ設定・
+            SSH鍵認証・UFWファイアウォール設定・Nginx導入まで、
+            サーバーをゼロから本番稼働できる状態に構築。
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">AWS EC2</span>
+            <span class="work-tag">Ubuntu</span>
+            <span class="work-tag">UFW</span>
+            <span class="work-tag">SSH</span>
+            <span class="work-tag">Nginx</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">連絡先</h2>
+        <p>
+          インフラ・クラウド・ネットワーク関連の案件、インターンシップ、
+          勉強会など、お気軽にご連絡ください。
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your@email.com" class="contact-btn primary">
+            ✉ メールを送る
+          </a>
+          <a href="https://github.com/noaman121" target="_blank" rel="noopener" class="contact-btn secondary">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 西ノ原 希空. Built with AWS · Nginx · Docker · GitHub Actions.</p>
+  </footer>
+
 </body>
 </html>
