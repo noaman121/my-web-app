@@ -21,4 +21,4 @@ jobs:
             docker build -t my-site .
             docker stop test-container || true
             docker rm test-container || true
-            docker run -d -p 8080:80 --name test-container my-site
+            docker run -d -p 127.0.0.1:8080:80 --name test-container my-site
