@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="西ノ原 希空のポートフォリオ。インフラエンジニア志望。AWS・Linux・Docker・GitHub Actionsを使ったサーバー構築・自動化が得意です。">
+  <meta name="description" content="西ノ原 希空のポートフォリオ。ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCを使ったネットワーク構築経験あり。CCST Networking取得・CCNA学習中。">
   <title>西ノ原 希空 — Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,13 +25,12 @@
   <!-- Hero -->
   <section id="name">
     <div class="container">
-      <p class="hero-eyebrow">Aspiring Infrastructure Engineer</p>
+      <p class="hero-eyebrow">Aspiring Network Engineer</p>
       <h1 class="hero-name">
         西ノ原 <span>希空</span>
       </h1>
       <p class="hero-tagline">
-        クラウド・Linux・コンテナで、安定したインフラを設計・構築します。
-        自動化とセキュリティを軸に、手を動かし続けるエンジニアを目指しています。
+        ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCなどを使ったネットワーク構築経験あり。
       </p>
       <a href="#contact" class="hero-cta">お問い合わせ →</a>
     </div>
@@ -47,12 +46,12 @@
           <h2 class="section-title">自己紹介</h2>
           <div class="profile">
             <p>名前：西ノ原希空</p>
-            <p>学校：麻生情報ビジネス専門学校 4年制 3年</p>
+            <p>学校：麻生情報ビジネス専門学校 4年制 3年生</p>
             <p>卒業予定：2028年3月</p>
           </div>
           <p>
             ネットワーク・インフラに興味を持ち、
-            「縁の下でシステムを支えるエンジニア」を目指して学んでいます。
+            「ITが急速に進化し続けている中で、その進化を先導していけるエンジニア」を目指して学んでいます。
           </p>
           <p>
             学校の実習環境（Cisco実機・WLC）でVLAN・ACL・OSPF・HSRPなどを構築しています。
@@ -60,14 +59,12 @@
             インフラ特有の「確実さ」を大切にする姿勢につながっています。
           </p>
           <p>
-            FE・CCST・Linux Essentialsを取得し、現在はCCNAとLPIC-1を勉強中です。
+            FE・CCST・Linux Essentialsを取得し、現在はCCNAとLPIC-1、AWSを勉強中です。
           </p>
           <div class="about-badges">
             <span class="badge">基本情報技術者 (FE)</span>
             <span class="badge">Linux Essentials</span>
             <span class="badge">CCST Networking</span>
-            <span class="badge">CCNA 勉強中</span>
-            <span class="badge">LPIC-1 勉強中</span>
           </div>
         </div>
         <div class="about-stats">
@@ -76,16 +73,16 @@
             <span class="stat-label">取得資格</span>
           </div>
           <div class="stat-card">
+            <span class="stat-number">Cisco</span>
+            <span class="stat-label">実機構築経験あり</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">L2 / L3</span>
+            <span class="stat-label">スイッチング・ルーティング</span>
+          </div>
+          <div class="stat-card">
             <span class="stat-number">AWS</span>
             <span class="stat-label">クラウド環境</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">CI/CD</span>
-            <span class="stat-label">自動デプロイ実装済</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">HTTPS</span>
-            <span class="stat-label">TLS/SSL 構築済</span>
           </div>
         </div>
       </div>
@@ -98,6 +95,31 @@
       <p class="section-label">Skills</p>
       <h2 class="section-title">スキル</h2>
       <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🔀</span>
+          <div class="skill-name">ルーティング（OSPF / BGP）</div>
+          <div class="skill-desc">OSPFによるダイナミックルーティング構築経験。BGP学習中。</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🗂️</span>
+          <div class="skill-name">VLAN / トランク</div>
+          <div class="skill-desc">VLAN設計・インタービラン通信・802.1Qトランク設定</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔁</span>
+          <div class="skill-name">冗長化（HSRP）</div>
+          <div class="skill-desc">HSRPを使ったL3冗長構成の設計・構築</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📶</span>
+          <div class="skill-name">無線LAN（WLC）</div>
+          <div class="skill-desc">Cisco WLCを使った無線LAN環境の管理・設定</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🚦</span>
+          <div class="skill-name">ACL / アクセス制御</div>
+          <div class="skill-desc">標準・拡張ACLによるトラフィック制御</div>
+        </div>
         <div class="skill-card">
           <span class="skill-icon">☁️</span>
           <div class="skill-name">AWS EC2</div>
@@ -129,11 +151,6 @@
           <div class="skill-desc">Let's EncryptとCertbotを使ったSSL証明書の取得・自動更新設定。</div>
         </div>
         <div class="skill-card">
-          <span class="skill-icon">🌍</span>
-          <div class="skill-name">Networking</div>
-          <div class="skill-desc">TCP/IP・DNS・ルーティングの基礎知識。CCST Networking取得。CCNA学習中。</div>
-        </div>
-        <div class="skill-card">
           <span class="skill-icon">🐙</span>
           <div class="skill-name">Git / GitHub</div>
           <div class="skill-desc">バージョン管理・ブランチ運用・プルリクエストベースの開発フロー。</div>
@@ -148,9 +165,70 @@
       <p class="section-label">Works</p>
       <h2 class="section-title">制作物</h2>
       <div class="works-grid">
+
+        <!-- 実機ネットワーク構築 card -->
+        <div class="work-card">
+          <div class="work-slideshow" data-index="0">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <div class="slide-track">
+              <img src="images/network1.png" alt="実機ネットワーク 1">
+              <img src="images/network2.png" alt="実機ネットワーク 2">
+              <img src="images/network3.png" alt="実機ネットワーク 3">
+            </div>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-header">
+            <div class="work-title">実機ネットワーク構築</div>
+          </div>
+          <p class="work-desc">
+            Cisco実機を使いVLAN・ACL・OSPF・HSRP・WLCなどを構築。
+            放課後等を活用し実際に手を動かした環境構築の記録。
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">Cisco</span>
+            <span class="work-tag">VLAN</span>
+            <span class="work-tag">OSPF</span>
+            <span class="work-tag">HSRP</span>
+            <span class="work-tag">ACL</span>
+            <span class="work-tag">WLC</span>
+          </div>
+        </div>
+
+        <!-- Packet Tracer card -->
+        <div class="work-card">
+          <div class="work-slideshow" data-index="0">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <div class="slide-track">
+              <img src="images/packet1.png" alt="Packet Tracer 設計 1">
+              <img src="images/packet2.png" alt="Packet Tracer 設計 2">
+            </div>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-header">
+            <div class="work-title">Packet Tracer・実機機器ネットワーク設計</div>
+          </div>
+          <p class="work-desc">
+            ネットワーク構築ををPacket Tracer・実機機器で設計・検証
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">Packet Tracer</span>
+            <span class="work-tag">VLAN</span>
+            <span class="work-tag">ルーティング</span>
+          </div>
+        </div>
+
         <div class="work-card">
           <div class="work-header">
-            <div class="work-title">このポートフォリオサイト</div>
+            <div class="work-title">ポートフォリオサイト</div>
             <span class="work-link-icon">↗</span>
           </div>
           <p class="work-desc">
@@ -169,7 +247,7 @@
         </div>
         <div class="work-card">
           <div class="work-header">
-            <div class="work-title">CI/CDパイプライン構築</div>
+            <div class="work-title">自動デプロイパイプライン構築</div>
             <span class="work-link-icon">↗</span>
           </div>
           <p class="work-desc">
@@ -200,66 +278,6 @@
             <span class="work-tag">UFW</span>
             <span class="work-tag">SSH</span>
             <span class="work-tag">Nginx</span>
-          </div>
-        </div>
-
-        <!-- Packet Tracer card -->
-        <div class="work-card">
-          <div class="work-slideshow" data-index="0">
-            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
-            <div class="slide-track">
-              <img src="images/packet1.png" alt="Packet Tracer 設計 1">
-              <img src="images/packet2.png" alt="Packet Tracer 設計 2">
-            </div>
-            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
-            <div class="slide-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-          <div class="work-header">
-            <div class="work-title">Packet Tracerネットワーク設計</div>
-          </div>
-          <p class="work-desc">
-            VLANやルーティングをPacket Tracerで設計・検証
-          </p>
-          <div class="work-tags">
-            <span class="work-tag">Packet Tracer</span>
-            <span class="work-tag">VLAN</span>
-            <span class="work-tag">ルーティング</span>
-          </div>
-        </div>
-
-        <!-- 実機ネットワーク構築 card -->
-        <div class="work-card">
-          <div class="work-slideshow" data-index="0">
-            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
-            <div class="slide-track">
-              <img src="images/network1.png" alt="実機ネットワーク 1">
-              <img src="images/network2.png" alt="実機ネットワーク 2">
-              <img src="images/network3.png" alt="実機ネットワーク 3">
-            </div>
-            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
-            <div class="slide-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-          <div class="work-header">
-            <div class="work-title">実機ネットワーク構築</div>
-          </div>
-          <p class="work-desc">
-            Cisco実機を使いVLAN・ACL・OSPF・HSRP・WLCなどを構築。
-            放課後も残って実際に手を動かした環境構築の記録。
-          </p>
-          <div class="work-tags">
-            <span class="work-tag">Cisco</span>
-            <span class="work-tag">VLAN</span>
-            <span class="work-tag">OSPF</span>
-            <span class="work-tag">HSRP</span>
-            <span class="work-tag">ACL</span>
-            <span class="work-tag">WLC</span>
           </div>
         </div>
 
@@ -294,11 +312,10 @@
         <p class="section-label">Contact</p>
         <h2 class="section-title">連絡先</h2>
         <p>
-          インフラ・クラウド・ネットワーク関連の案件、インターンシップ、
-          勉強会など、お気軽にご連絡ください。
+          インターンシップや勉強会への参加を希望しています。ご連絡お待ちしております。
         </p>
         <div class="contact-links">
-          <a href="mailto:your@email.com" class="contact-btn primary">
+          <a href="mailto:2401072@s.asojuku.ac.jp" class="contact-btn primary">
             ✉ メールを送る
           </a>
           <a href="https://github.com/noaman121" target="_blank" rel="noopener" class="contact-btn secondary">
@@ -311,7 +328,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 西ノ原 希空. Built with AWS · Nginx · Docker · GitHub Actions.</p>
+    <p>© 2026 西ノ原 希空</p>
   </footer>
 
 </body>
