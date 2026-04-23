@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="西ノ原 希空のポートフォリオ。ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCを使ったネットワーク構築経験あり。CCST Networking取得・CCNA学習中。">
+  <title>西ノ原 希空 — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">portfolio</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="name">
+    <div class="container">
+      <p class="hero-eyebrow">Aspiring Network Engineer</p>
+      <h1 class="hero-name">
+        西ノ原 <span>希空</span>
+      </h1>
+      <p class="hero-tagline">
+        ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCなどを使ったネットワーク構築経験あり。
+      </p>
+      <a href="#contact" class="hero-cta">ご連絡はこちらから →</a>
+    </div>
+    <div class="hero-scroll">SCROLL</div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title">自己紹介</h2>
+          <div class="profile">
+            <p>名前：西ノ原希空</p>
+            <p>学校：麻生情報ビジネス専門学校 4年制 3年生</p>
+            <p>卒業予定：2028年3月</p>
+          </div>
+          <p>
+            ネットワーク・インフラに興味を持ち、
+            「ITが急速に進化し続けている中で、その進化を先導していけるエンジニア」を目指して学んでいます。
+          </p>
+          <p>
+            学校の実習環境（Cisco実機・WLC）でVLAN・ACL・OSPF・HSRPなどを構築しています。
+            几帳面な性格から設定を何度も確認する習慣があり、
+            インフラ特有の「確実さ」を大切にする姿勢につながっています。
+          </p>
+          <p>
+            FE・CCST・Linux Essentialsを取得し、現在はCCNAとLPIC-1、AWSを勉強中です。
+            自サービスの本番運用経験あり。
+          </p>
+          <div class="about-badges">
+            <span class="badge">基本情報技術者 (FE)</span>
+            <span class="badge">Linux Essentials</span>
+            <span class="badge">CCST Networking</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">取得資格</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Cisco</span>
+            <span class="stat-label">実機構築経験あり</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">L2 / L3</span>
+            <span class="stat-label">スイッチング・ルーティング</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">AWS</span>
+            <span class="stat-label">クラウド環境</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works">
+    <div class="container">
+      <p class="section-label">Works</p>
+      <h2 class="section-title">制作物</h2>
+      <div class="works-list">
+
+        <!-- 実機ネットワーク構築 -->
+        <div class="work-card"
+          data-slides='[
+            {"img":"images/network1.png","alt":"実機ネットワーク構築 1","caption":"VLAN設計・インタービラン通信の構成。802.1Qトランクでスイッチ間を接続。"},
+            {"img":"images/network2.png","alt":"実機ネットワーク構築 2","caption":"OSPFによるダイナミックルーティング構築。隣接確立のトラブルシュート経験あり。"},
+            {"img":"images/network3.png","alt":"実機ネットワーク構築 3","caption":"HSRPを使ったL3冗長構成。プライオリティ設計でVLANごとに負荷分散。"}
+          ]'>
+          <div class="work-media">
+            <img class="slide-img slide-image" src="images/network1.png" alt="実機ネットワーク構築 1">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-title">実機ネットワーク構築</div>
+            <p class="slide-caption">VLAN設計・インタービラン通信の構成。802.1Qトランクでスイッチ間を接続。</p>
+            <div class="work-details">
+              <p><strong>構成概要：</strong>VLAN 4つ、OSPFエリア設計、HSRPでL3冗長化</p>
+              <p><strong>工夫した点：</strong>放課後の実習時間を活用し、実際に手を動かして構築。トラブルシュートも含めて設定を何度も確認する習慣をつけた。</p>
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">Cisco</span>
+              <span class="work-tag">VLAN</span>
+              <span class="work-tag">OSPF</span>
+              <span class="work-tag">HSRP</span>
+              <span class="work-tag">ACL</span>
+              <span class="work-tag">WLC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 企業ネットワーク設計・構築 -->
+        <div class="work-card"
+          data-slides='[
+            {"img":"images/packet1.png","alt":"企業ネットワーク設計 トポロジー","caption":"2拠点構成のトポロジー図。VLAN6つ、EtherChannel（LACP）、OSPF Area分割・ABR構成を実装。"},
+            {"img":"images/packet2.png","alt":"企業ネットワーク設計 動作確認","caption":"show standby briefとshow ip ospf neighborによる動作確認。HSRPのActive/Standby状態とOSPF隣接をFULL状態で確認済み。"}
+          ]'>
+          <div class="work-media">
+            <img class="slide-img slide-image" src="images/packet1.png" alt="企業ネットワーク設計 トポロジー">
+            <button class="slide-btn slide-prev" aria-label="前へ">&#8249;</button>
+            <button class="slide-btn slide-next" aria-label="次へ">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-title">企業ネットワーク設計・構築（Packet Tracer）</div>
+            <p class="slide-caption">2拠点構成のトポロジー図。VLAN6つ、EtherChannel（LACP）、OSPF Area分割・ABR構成を実装。</p>
+            <div class="work-details">
+              <p><strong>構成概要：</strong>本社・支社2拠点構成。VLAN/OSPF/HSRP/EtherChannel/DHCP/NAT/ACLを組み合わせた複合構成をPacket Tracerで設計・構築・動作確認済み。</p>
+              <p><strong>工夫した点：</strong>HSRPをVLANごとにグループIDを分けて設計し、CoreSW1とCoreSW2で負荷分散する構成にした。</p>
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">VLAN</span>
+              <span class="work-tag">OSPF</span>
+              <span class="work-tag">HSRP</span>
+              <span class="work-tag">EtherChannel</span>
+              <span class="work-tag">DHCP</span>
+              <span class="work-tag">NAT</span>
+              <span class="work-tag">ACL</span>
+            </div>
+            <div class="work-links">
+              <a href="https://github.com/noaman121/your-repo" target="_blank" rel="noopener" class="work-btn">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ポートフォリオサイト -->
+        <div class="work-card work-card-full">
+          <div class="work-content">
+            <div class="work-title">ポートフォリオサイト <span class="work-link-icon">↗</span></div>
+            <div class="work-details">
+              <p><strong>構成概要：</strong>AWS EC2 + Ubuntu + Nginx + Docker + GitHub Actionsで構築した本番運用中のポートフォリオサイト。Let's EncryptによるHTTPS化、GitへのプッシュからEC2への自動デプロイまで一気通貫で実装。</p>
+              <p><strong>工夫した点：</strong>自サービスの本番運用経験あり。インフラ構成をゼロから設計・構築し、CI/CDパイプラインも自前で実装した。</p>
+            </div>
+            <div class="work-tags">
+              <span class="work-tag">AWS EC2</span>
+              <span class="work-tag">Ubuntu</span>
+              <span class="work-tag">Nginx</span>
+              <span class="work-tag">Docker</span>
+              <span class="work-tag">GitHub Actions</span>
+              <span class="work-tag">HTTPS</span>
+            </div>
+            <div class="work-links">
+              <a href="https://github.com/noaman121/your-portfolio-repo" target="_blank" rel="noopener" class="work-btn">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.work-card[data-slides]').forEach(function(card) {
+      var slides = JSON.parse(card.dataset.slides);
+      var img = card.querySelector('.slide-img');
+      var caption = card.querySelector('.slide-caption');
+      var dots = card.querySelectorAll('.dot');
+      var idx = 0;
+
+      function show(n) {
+        idx = (n + slides.length) % slides.length;
+        img.src = slides[idx].img;
+        img.alt = slides[idx].alt || '';
+        caption.textContent = slides[idx].caption;
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+      }
+
+      card.querySelector('.slide-prev').addEventListener('click', function() { show(idx - 1); });
+      card.querySelector('.slide-next').addEventListener('click', function() { show(idx + 1); });
+      dots.forEach(function(d, i) { d.addEventListener('click', function() { show(i); }); });
+
+      show(0);
+    });
+  </script>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">連絡先</h2>
+        <p>
+          インターンシップや勉強会への参加を希望しています。<br>ご連絡お待ちしております。
+        </p>
+        <div class="contact-links">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLf1966-ZBNXzrhzg45DHcU0etfNK1nMT0y8RyME9CR3g00A/viewform?usp=publish-editor" target="_blank" rel="noopener" class="contact-btn primary">
+            ✉ お問い合わせフォーム
+          </a>
+          <a href="https://github.com/noaman121" target="_blank" rel="noopener" class="contact-btn secondary">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 西ノ原 希空</p>
+  </footer>
+
+</body>
+</html>
