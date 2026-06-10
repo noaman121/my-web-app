@@ -17,7 +17,7 @@ jobs:
       - name: SSH and Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: portfolio
+          host: portfolio.tail49762d.ts.net
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
