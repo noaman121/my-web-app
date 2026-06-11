@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自宅ラボ構築 — Proxmox / Tailscale / Cloudflare Tunnel | 西ノ原 希空</title>
+<meta name="description" content="中古機にProxmox VEを導入し、VM/コンテナで自分用のインフラ基盤を構築。Tailscaleでの安全なリモート接続と、ポートフォリオの公開・自動デプロイの仕組み。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-prompt">noa@infra</span><span class="brand-sep">:</span><span class="brand-path">~</span><span class="brand-cursor">$</span>
+    </a>
+    <nav class="nav">
+      <a href="/#about">about</a>
+      <a href="/#works">works</a>
+      <a href="/#skills">skills</a>
+      <a href="/#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <a class="breadcrumb" href="/#works"><span class="sec-cmd">$ cd</span> ../works</a>
+  </div>
+
+  <section class="work-hero">
+    <div class="wrap">
+      <span class="work-tag tag-build">homelab</span>
+      <h1>自宅ラボ構築</h1>
+      <p class="work-sub mono">Proxmox / Tailscale / Cloudflare Tunnel</p>
+      <div class="work-stack lg">
+        <span>Proxmox VE</span><span>Tailscale</span><span>Cloudflare Tunnel</span><span>Docker</span><span>Nginx</span><span>git hook</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="section">
+    <div class="wrap">
+
+      <div class="work-block">
+        <h2>overview</h2>
+        <p>中古のPCに <strong>Proxmox VE</strong> を導入し、自分専用のインフラ基盤を構築しました。VMやLXCコンテナを用途ごとに分け、ポートフォリオの公開や検証環境として運用しています。</p>
+      </div>
+
+      <div class="work-block">
+        <h2>構成</h2>
+        <ul>
+          <li>Proxmox VE をハイパーバイザとして導入し、VM / LXCを役割ごとに分離</li>
+          <li><strong>Tailscale</strong> を導入し、外出先からも自宅環境へ安全にSSH・管理アクセス</li>
+          <li><strong>Cloudflare Tunnel</strong> でポートフォリオサイトを公開し、グローバルへのポート開放を行わない構成に</li>
+          <li>Docker + Nginx でアプリケーションを実行し、用途ごとにコンテナを分離</li>
+        </ul>
+      </div>
+
+      <div class="work-block">
+        <h2>自動デプロイの仕組み</h2>
+        <p>GitHubリポジトリへの <span class="mono">git push</span> をきっかけに、サーバ側の git hook が <span class="mono">git pull</span> → <span class="mono">docker build</span> → コンテナ再起動までを自動で行うようにしています。手元での変更がそのまま公開環境に反映されるため、検証から公開までのサイクルを短くできています。</p>
+        <div class="diagram">  developer
+     │ git push
+     <span class="hl">▼</span>
+<span class="hl">┌──────────────┐</span>
+│ GitHub repo  │
+<span class="hl">└──────┬───────┘</span>
+       │ pull (git hook)
+<span class="hl2">┌──────┴───────┐</span>
+│ Proxmox VM   │
+│  docker build│
+│  docker run  │
+<span class="hl2">└──────────────┘</span>
+       │
+       ▼ Cloudflare Tunnel 経由で公開</div>
+      </div>
+
+      <div class="work-block">
+        <h2>今後の予定</h2>
+        <ul>
+          <li>監視・バックアップ基盤の強化</li>
+          <li>検証用ネットワーク機器(L3スイッチ等)の自宅ラボへの組み込み</li>
+          <li>学内ネットワーク運用で得た知見をホームラボの設計にも反映</li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="wrap">
+    <div class="work-nav">
+      <a href="/works/migration.html">← クラウド→オンプレ移行</a>
+      <a href="/#works">works 一覧へ →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="foot-prompt">noa@infra:~$ <span class="muted">logout</span></span>
+    <span class="foot-copy">© 2026 Nishinohara Noa</span>
+  </div>
+</footer>
+
+</body>
+</html>

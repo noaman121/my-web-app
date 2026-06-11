@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学内ネットワーク運用 — HOMENOC / BGP / Peering | 西ノ原 希空</title>
+<meta name="description" content="HOMENOCの回線を使い学生で運用する学内ネットワーク。BGPによる経路制御・ピアリング、L3機器の保守、DNS・監視サービスの提供に運営メンバーとして携わった経験。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-prompt">noa@infra</span><span class="brand-sep">:</span><span class="brand-path">~</span><span class="brand-cursor">$</span>
+    </a>
+    <nav class="nav">
+      <a href="/#about">about</a>
+      <a href="/#works">works</a>
+      <a href="/#skills">skills</a>
+      <a href="/#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <a class="breadcrumb" href="/#works"><span class="sec-cmd">$ cd</span> ../works</a>
+  </div>
+
+  <section class="work-hero">
+    <div class="wrap">
+      <span class="work-tag tag-live">production</span>
+      <h1>学内ネットワーク運用</h1>
+      <p class="work-sub mono">HOMENOC upstream / BGP / peering</p>
+      <div class="work-stack lg">
+        <span>BGP</span><span>Peering</span><span>OSPF</span><span>VLAN</span><span>ACL</span><span>HSRP</span><span>L3</span><span>DNS</span><span>Monitoring</span><span>WLC</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="section">
+    <div class="wrap">
+
+      <div class="work-block">
+        <h2>overview</h2>
+        <p>所属する専門学校では、<strong>HOMENOC</strong> から提供される回線を使って学内ネットワークを学生だけで運用しています。私はその運営メンバーの一人として、経路制御からサービス提供まで実運用の一部を担当しています。</p>
+        <p>本番環境のため、設定変更は検証 → 影響範囲の確認 → 投入という手順を徹底し、几帳面に確認を重ねながら作業しています。</p>
+      </div>
+
+      <div class="work-block">
+        <h2>role / 担当業務</h2>
+        <ul>
+          <li>BGPによる経路制御・上流(HOMENOC)とのピアリング設定の確認・保守</li>
+          <li>ルータ / L3スイッチのコンフィグ管理とバックアップ</li>
+          <li>学内向けDNSサービスの運用</li>
+          <li>ネットワーク監視(死活・トラフィック)の構築・確認</li>
+          <li>障害発生時の一次切り分けと記録</li>
+        </ul>
+      </div>
+
+      <div class="work-block">
+        <h2>network overview</h2>
+        <div class="diagram">    Internet
+        │
+   <span class="hl">┌────┴────┐</span>
+   │ HOMENOC │  upstream (BGP peering)
+   <span class="hl">└────┬────┘</span>
+        │ eBGP
+   <span class="hl2">┌────┴────┐</span>
+   │ Border  │  経路制御 / フィルタ
+   │ Router  │
+   <span class="hl2">└────┬────┘</span>
+        │ iBGP / OSPF
+   <span class="hl">┌────┴────┐</span>
+   │ Core L3 │──── DNS
+   │ Switch  │──── Monitoring
+   <span class="hl">└────┬────┘</span>
+        │
+   各VLAN (教室 / サーバ / 管理)</div>
+      </div>
+
+      <div class="work-block">
+        <h2>運用で意識していること</h2>
+        <ul>
+          <li>設定投入前に必ず差分とコマンドを見直し、影響範囲を確認してから反映する</li>
+          <li>障害時は <span class="mono">show</span> 系コマンドで切り分けを行い、原因を一つずつ潰す</li>
+          <li>仕組みを理解した上で、定型作業はスクリプト・自動化に置き換える</li>
+        </ul>
+      </div>
+
+      <div class="work-block">
+        <h2>実機演習で得たスキル</h2>
+        <p>授業外にもLab室のCisco実機・WLCを使って、VLAN・ACL・OSPF・HSRPなどの構築と検証を繰り返しています。学内ネットワークの運用と並行することで、設定の意図やコマンドの挙動を体感として理解できるようになりました。</p>
+        <img class="work-img" src="/images/packet1.png" alt="ネットワーク構成検証の様子">
+        <p class="img-cap">実機/シミュレータでのネットワーク構成検証</p>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="wrap">
+    <div class="work-nav">
+      <a href="/#works">← works 一覧</a>
+      <a href="/works/migration.html">次へ: クラウド→オンプレ移行 →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="foot-prompt">noa@infra:~$ <span class="muted">logout</span></span>
+    <span class="foot-copy">© 2026 Nishinohara Noa</span>
+  </div>
+</footer>
+
+</body>
+</html>

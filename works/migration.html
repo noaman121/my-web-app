@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クラウド→オンプレ移行 — AWS EC2 → 自宅 Proxmox | 西ノ原 希空</title>
+<meta name="description" content="本番運用していたAWS EC2上のポートフォリオ・監視環境を自宅Proxmoxへ移行。ポート開放なしの公開方式へ再設計し、AWSの課金を停止した取り組み。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-prompt">noa@infra</span><span class="brand-sep">:</span><span class="brand-path">~</span><span class="brand-cursor">$</span>
+    </a>
+    <nav class="nav">
+      <a href="/#about">about</a>
+      <a href="/#works">works</a>
+      <a href="/#skills">skills</a>
+      <a href="/#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <a class="breadcrumb" href="/#works"><span class="sec-cmd">$ cd</span> ../works</a>
+  </div>
+
+  <section class="work-hero">
+    <div class="wrap">
+      <span class="work-tag tag-infra">migration</span>
+      <h1>クラウド→オンプレ移行</h1>
+      <p class="work-sub mono">AWS EC2 → 自宅 Proxmox</p>
+      <div class="work-stack lg">
+        <span>AWS EC2</span><span>Proxmox</span><span>Cloudflare Tunnel</span><span>Docker</span><span>Nginx</span><span>Grafana</span><span>Prometheus</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="section">
+    <div class="wrap">
+
+      <div class="work-block">
+        <h2>overview</h2>
+        <p>本番運用していたポートフォリオサイトと監視環境は、もともとAWS EC2上にDocker・Nginxで構築していました。継続的な課金が発生する点と、自宅にProxmox環境を構築できたことから、同等の構成を自宅サーバへ移行しました。</p>
+      </div>
+
+      <div class="work-block">
+        <h2>移行前後の構成</h2>
+        <table class="kv-table">
+          <tr><th>環境</th><td>AWS EC2 (Ubuntu) → 自宅 Proxmox VE 上の Ubuntu VM</td></tr>
+          <tr><th>公開方式</th><td>EC2 + セキュリティグループでポート開放 → <strong>Cloudflare Tunnel</strong>(ポート開放なし)</td></tr>
+          <tr><th>アプリ実行</th><td>Docker + Nginx (構成は概ね踏襲)</td></tr>
+          <tr><th>デプロイ</th><td>git push → サーバ側 git hook で自動 build / 再起動</td></tr>
+          <tr><th>監視</th><td>Grafana / Prometheus による死活・リソース監視</td></tr>
+          <tr><th>コスト</th><td>EC2課金を停止し、自宅電源のみに集約</td></tr>
+        </table>
+      </div>
+
+      <div class="work-block">
+        <h2>構成図</h2>
+        <div class="diagram">  利用者
+    │ HTTPS
+    <span class="hl">▼</span>
+<span class="hl">┌─────────────────┐</span>
+│ Cloudflare      │  ポート開放なしで公開
+│ Tunnel / Edge   │
+<span class="hl">└────────┬────────┘</span>
+         │ outbound only
+<span class="hl2">┌────────┴────────┐</span>
+│ Proxmox VE (自宅) │
+│  ┌────────────┐ │
+│  │ Ubuntu VM   │ │
+│  │ Docker/Nginx│ │
+│  │ Grafana     │ │
+│  └────────────┘ │
+<span class="hl2">└─────────────────┘</span></div>
+      </div>
+
+      <div class="work-block">
+        <h2>工夫した点</h2>
+        <ul>
+          <li>EC2でポート開放していた構成を見直し、<strong>Cloudflare Tunnel</strong>でアウトバウンド接続のみで公開する方式に変更し、攻撃面を縮小</li>
+          <li>git push をトリガーにした自動デプロイの仕組みは移行後も維持し、運用負荷を変えずに環境だけを切り替え</li>
+          <li>移行後もGrafanaでサーバーリソースを継続監視し、移行前後でのレスポンスや負荷の差分を確認</li>
+        </ul>
+        <img class="work-img" src="/images/grafana.png" alt="Grafanaによるサーバーリソース監視ダッシュボード">
+        <p class="img-cap">Grafanaによるサーバーリソース監視ダッシュボード</p>
+      </div>
+
+      <div class="work-block">
+        <h2>結果</h2>
+        <p>AWSの月額課金を停止しつつ、サイトの可用性・デプロイ運用フローを維持したまま自宅環境への移行を完了しました。今後は冗長化やバックアップ体制の整備を進めていく予定です。</p>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="wrap">
+    <div class="work-nav">
+      <a href="/works/asobinoc.html">← 学内ネットワーク運用</a>
+      <a href="/works/homelab.html">次へ: 自宅ラボ構築 →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="foot-prompt">noa@infra:~$ <span class="muted">logout</span></span>
+    <span class="foot-copy">© 2026 Nishinohara Noa</span>
+  </div>
+</footer>
+
+</body>
+</html>

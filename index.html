@@ -1,188 +1,202 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="西ノ原 希空のポートフォリオ。ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCを使ったネットワーク構築経験あり。CCNA取得">
-  <title>西ノ原 希空 — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0H144CLMCR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西ノ原 希空 — Network &amp; Infra Engineer</title>
+<meta name="description" content="西ノ原希空のポートフォリオ。ネットワーク・インフラエンジニア志望。HOMENOC回線を用いた学内ネットワークの実運用(BGP/ピアリング)、AWSから自宅Proxmoxへの移行、ホームラボ構築。CCNA/FE/Linux Essentials取得。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0H144CLMCR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-0H144CLMCR');
-  </script>
+  gtag('config', 'G-0H144CLMCR');
+</script>
 </head>
 <body>
+<div class="scanline" aria-hidden="true"></div>
 
-  <!-- Nav -->
-  <nav>
-    <div class="nav-inner">
-      <span class="nav-logo">portfolio</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-prompt">noa@infra</span><span class="brand-sep">:</span><span class="brand-path">~</span><span class="brand-cursor">$</span>
+    </a>
+    <nav class="nav">
+      <a href="#about">about</a>
+      <a href="#works">works</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section id="name">
-    <div class="container">
-      <p class="hero-eyebrow">Aspiring Network Engineer</p>
-      <h1 class="hero-name">
-        西ノ原 <span>希空</span>
-      </h1>
-      <p class="hero-tagline">
-        ネットワークエンジニア志望。Cisco実機・VLAN・OSPF・HSRP・WLCなどを使ったネットワーク構築経験あり。
-      </p>
-      <a href="#contact" class="hero-cta">ご連絡はこちらから →</a>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="term" role="img" aria-label="ターミナル風の自己紹介">
+        <div class="term-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="term-title">noa@infra: ~</span>
+        </div>
+        <div class="term-body">
+          <p class="line"><span class="ps1">noa@infra:~$</span> <span class="typed" data-text="whoami"></span></p>
+          <p class="out name">西ノ原 希空 <span class="muted">/ Nishinohara Noa</span></p>
+          <p class="line"><span class="ps1">noa@infra:~$</span> <span class="typed2" data-text="cat role.txt"></span></p>
+          <p class="out role">Network &amp; Infrastructure Engineer <span class="aspiring">(aspiring)</span></p>
+          <p class="out tagline">インターネットの「進化を先導する」エンジニアを目指して、<br>実運用のネットワークとインフラを手で動かしながら学んでいます。</p>
+          <p class="line blinkline"><span class="ps1">noa@infra:~$</span> <span class="caret">▋</span></p>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <a href="#works" class="cta">$ ls works/ →</a>
+        <div class="asn">
+          <span class="asn-label">運用に関わるネットワーク</span>
+          <span class="asn-val">HOMENOC upstream · BGP / peering</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-scroll">SCROLL</div>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container">
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><span class="sec-cmd">$ cat</span> about.txt</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p class="section-label">About</p>
-          <h2 class="section-title">自己紹介</h2>
-          <div class="profile">
-            <p>名前：西ノ原希空</p>
-            <p>学校：麻生情報ビジネス専門学校 4年制 3年生</p>
-            <p>卒業予定：2028年3月</p>
-          </div>
-          <p>
-            ネットワーク・インフラに興味を持ち、
-            「ITが急速に進化し続けている中で、その進化を先導していけるエンジニア」を目指して学んでいます。
-          </p>
-          <p>
-            学校の実習環境（Cisco実機・WLC）でVLAN・ACL・OSPF・HSRPなどを構築しています。
-            几帳面な性格から設定を何度も確認する習慣があり、
-            インフラ特有の「確実さ」を大切にする姿勢につながっています。
-          </p>
-          <p>
-            FE・CCNA・Linux Essentialsを取得し、現在はAWS、ネットワーク仮想化を勉強中です。
-            自サービスの本番運用経験あり。
-          </p>
-          <div class="about-badges">
-            <span class="badge">基本情報技術者 (FE)</span>
-            <span class="badge">Linux Essentials</span>
-            <span class="badge">CCNA</span>
-          </div>
+          <p>麻生情報ビジネス専門学校(4年制)の3年生。ネットワークとサーバーを専攻しています。卒業予定は2028年3月。</p>
+          <p>学内では <strong>HOMENOC の回線を使った学内ネットワークを学生で運用</strong>しており、BGPによる経路制御・ピアリング、ルータ/L3スイッチの設定・保守、DNSや監視などのサービス提供に運営メンバーの一人として携わっています。実機の演習環境ではVLAN・ACL・OSPF・HSRP・WLCを構築。</p>
+          <p>几帳面な性格で、設定は何度も確認してから投入する習慣があります。インフラ特有の「確実さ」を大切にしながら、<strong>仕組みを理解したうえで自動化を使う</strong>ことを意識しています。</p>
         </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <span class="stat-number">3+</span>
-            <span class="stat-label">取得資格</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">Cisco</span>
-            <span class="stat-label">実機構築経験あり</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">L2 / L3</span>
-            <span class="stat-label">スイッチング・ルーティング</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">AWS</span>
-            <span class="stat-label">クラウド環境</span>
-          </div>
+        <div class="about-card">
+          <div class="card-row"><span class="k">school</span><span class="v">麻生情報ビジネス専門学校</span></div>
+          <div class="card-row"><span class="k">grade</span><span class="v">4年制 3年 / 卒業 2028.03</span></div>
+          <div class="card-row"><span class="k">focus</span><span class="v">Network / Infrastructure</span></div>
+          <div class="card-row"><span class="k">certs</span><span class="v">CCNA · FE · Linux Essentials</span></div>
+          <div class="card-row"><span class="k">activity</span><span class="v">ICTSC2026 学生運営 / QUNOG</span></div>
+          <div class="card-row"><span class="k">location</span><span class="v">Fukuoka, JP</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Works -->
-  <section id="works">
-    <div class="container">
-      <p class="section-label">Works</p>
-      <h2 class="section-title">制作物</h2>
-      <div class="works-list">
+  <!-- WORKS -->
+  <section id="works" class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><span class="sec-cmd">$ ls -la</span> works/</h2>
+      <p class="sec-note">実運用・移行・構築の3つを中心に。各 <span class="mono">README</span> で詳細へ。</p>
 
-        <!-- 実機ネットワーク構築 -->
-        <div class="work-card work-card-full">
-          <div class="work-content">
-            <div class="work-title">実機ネットワーク構築</div>
-            <div class="work-details">
-              <p><strong>概要：</strong>学校の実習環境にあるCisco実機を使って日常的にネットワーク構築を行っている。
-授業外も放課後にLab室を活用し、設定・検証・トラブルシュートを繰り返している。</p>
-	      <p><strong>工夫した点：</strong>学習と並行して実機に触れることで、
-コマンドの意味や設定の意図を体感として理解することを意識している。
-トラブルが起きたときはshow コマンドで原因を一つひとつ切り分け、自力で解決することを大切にしている。</p>
-            </div>
-            <div class="work-tags">
-              <span class="work-tag">Cisco</span>
-              <span class="work-tag">VLAN</span>
-              <span class="work-tag">OSPF</span>
-              <span class="work-tag">HSRP</span>
-              <span class="work-tag">ACL</span>
-              <span class="work-tag">WLC</span>
-            </div>
+      <div class="works">
+        <a class="work" href="works/asobinoc.html">
+          <div class="work-top">
+            <span class="work-idx">01</span>
+            <span class="work-tag tag-live">production</span>
           </div>
-        </div>
+          <h3 class="work-title">学内ネットワーク運用 <span class="arrow">→</span></h3>
+          <p class="work-sub">HOMENOC upstream / BGP / peering</p>
+          <p class="work-desc">HOMENOCの回線を使い、学生で運用する学内ネットワーク。BGPの経路制御・ピアリング、L3機器の保守、DNS・監視などのサービス提供に運営メンバーとして参加。</p>
+          <div class="work-stack"><span>BGP</span><span>Peering</span><span>L3</span><span>DNS</span><span>Monitoring</span></div>
+        </a>
 
-        <!-- ポートフォリオサイト -->
-        <div class="work-card work-card-full">
-          <div class="work-content">
-            <div class="work-title">ポートフォリオサイト <span class="work-link-icon">↗</span></div>
-            <div class="work-details">
-              <p><strong>構成概要：</strong>AWS EC2 + Ubuntu + Nginx + Docker + GitHub Actionsで構築した本番運用中のポートフォリオサイト。
-Let's EncryptとCertbotによるHTTPS化、カスタムポートによるSSHセキュリティ強化、NginxリバースプロキシでDockerコンテナにルーティングする構成を採用。</p>
-              <p><strong>工夫した点：</strong>GitHubにpushするだけでGitHub ActionsがEC2にSSH接続し、git pull → docker build → コンテナ再起動までを完全自動化した。
-インフラ構成をゼロから構築し、Grafanaによるサーバーリソース監視基盤も構築・運用中。</p>
-            </div>
-            <div class="work-tags">
-              <span class="work-tag">AWS EC2</span>
-              <span class="work-tag">Ubuntu</span>
-              <span class="work-tag">Nginx</span>
-              <span class="work-tag">Docker</span>
-              <span class="work-tag">GitHub Actions</span>
-              <span class="work-tag">HTTPS</span>
-            </div>
-            <div class="work-links">
-              <a href="https://github.com/noaman121/my-web-app" target="_blank" rel="noopener" class="work-btn">GitHub →</a>
-            </div>
+        <a class="work" href="works/migration.html">
+          <div class="work-top">
+            <span class="work-idx">02</span>
+            <span class="work-tag tag-infra">migration</span>
           </div>
-        </div>
+          <h3 class="work-title">クラウド→オンプレ移行 <span class="arrow">→</span></h3>
+          <p class="work-sub">AWS EC2 → 自宅 Proxmox</p>
+          <p class="work-desc">本番運用していたAWS上のポートフォリオ/監視環境を、自宅のProxmox環境へ移行。ポート開放なしの公開方式へ再設計し、AWSの課金を停止。</p>
+          <div class="work-stack"><span>AWS</span><span>Proxmox</span><span>Cloudflare Tunnel</span><span>Docker</span></div>
+        </a>
 
+        <a class="work" href="works/homelab.html">
+          <div class="work-top">
+            <span class="work-idx">03</span>
+            <span class="work-tag tag-build">homelab</span>
+          </div>
+          <h3 class="work-title">自宅ラボ構築 <span class="arrow">→</span></h3>
+          <p class="work-sub">Proxmox / Tailscale / Cloudflare Tunnel</p>
+          <p class="work-desc">中古機にProxmox VEを入れ、VM/コンテナで自分用のインフラ基盤を構築。Tailscaleで安全にリモート接続し、ポートフォリオを公開・自動デプロイ。</p>
+          <div class="work-stack"><span>Proxmox</span><span>Tailscale</span><span>Nginx</span><span>git hook</span></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <p class="section-label">Contact</p>
-        <h2 class="section-title">連絡先</h2>
-        <p>
-          説明会や勉強会への参加を希望しています。<br>ご連絡お待ちしております。
-        </p>
-        <div class="contact-links">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLf1966-ZBNXzrhzg45DHcU0etfNK1nMT0y8RyME9CR3g00A/viewform?usp=publish-editor" target="_blank" rel="noopener" class="contact-btn primary">
-            ✉ ご連絡はこちらから
-          </a>
-          <a href="https://github.com/noaman121" target="_blank" rel="noopener" class="contact-btn secondary">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/%E5%B8%8C%E7%A9%BA-%E8%A5%BF%E3%83%8E%E5%8E%9F-354360410/" target="_blank" rel="noopener" class="contact-btn secondary">
-            LinkedIn
-          </a>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><span class="sec-cmd">$ cat</span> skills.txt</h2>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h4 class="skill-h">Network</h4>
+          <ul>
+            <li>BGP / 経路制御 / ピアリング</li>
+            <li>OSPF · VLAN · ACL · HSRP</li>
+            <li>Cisco 実機 (L2/L3) · WLC</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h4 class="skill-h">Infra / Server</h4>
+          <ul>
+            <li>Proxmox VE · Linux</li>
+            <li>Docker · Nginx</li>
+            <li>Tailscale · Cloudflare Tunnel</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h4 class="skill-h">Cloud / Ops</h4>
+          <ul>
+            <li>AWS (EC2)</li>
+            <li>Grafana · Prometheus</li>
+            <li>Git / 自動デプロイ</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h4 class="skill-h">Certs</h4>
+          <ul>
+            <li>CCNA</li>
+            <li>基本情報技術者 (FE)</li>
+            <li>Linux Essentials</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 nishinohara noa</p>
-  </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><span class="sec-cmd">$ ./</span>contact.sh</h2>
+      <p class="contact-lead">説明会・勉強会・インターンのお声がけを歓迎しています。お気軽にどうぞ。</p>
+      <div class="contact-links">
+        <a class="clink" href="https://docs.google.com/forms/d/e/1FAIpQLSfLf1966-ZBNXzrhzg45DHcU0etfNK1nMT0y8RyME9CR3g00A/viewform" target="_blank" rel="noopener">
+          <span class="clink-k">contact form</span><span class="clink-v">問い合わせフォーム →</span>
+        </a>
+        <a class="clink" href="https://github.com/noaman121" target="_blank" rel="noopener">
+          <span class="clink-k">github</span><span class="clink-v">@noaman121 →</span>
+        </a>
+        <a class="clink" href="https://www.linkedin.com/in/%E5%B8%8C%E7%A9%BA-%E8%A5%BF%E3%83%8E%E5%8E%9F-354360410/" target="_blank" rel="noopener">
+          <span class="clink-k">linkedin</span><span class="clink-v">西ノ原 希空 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
 
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="foot-prompt">noa@infra:~$ <span class="muted">logout</span></span>
+    <span class="foot-copy">© 2026 Nishinohara Noa</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
