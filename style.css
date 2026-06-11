@@ -308,99 +308,19 @@ section {
   gap: 2.5rem;
 }
 
-/* Card with slideshow: image left, content right */
+/* Work card */
 .work-card {
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   transition: border-color var(--transition);
 }
 
 .work-card:hover {
   border-color: var(--accent);
-}
-
-/* Full-width card (no image) */
-.work-card-full {
-  grid-template-columns: 1fr;
-}
-
-/* ===== Work media (slideshow side) ===== */
-.work-media {
-  position: relative;
-  overflow: hidden;
-  background: var(--surface-2);
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.work-media .slide-img {
-  max-width: 100%;
-  max-height: 320px;
-  width: auto;
-  height: auto;
-  display: block;
-  cursor: zoom-in;
-}
-
-.slide-image {
-  max-width: 100%;
-  max-height: 320px;
-  width: auto;
-  height: auto;
-  display: block;
-  cursor: zoom-in;
-}
-
-.slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  line-height: 1;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  z-index: 2;
-  border-radius: 4px;
-  transition: background var(--transition);
-  user-select: none;
-}
-
-.slide-btn:hover {
-  background: rgba(108, 99, 255, 0.8);
-}
-
-.slide-prev { left: 0.6rem; }
-.slide-next { right: 0.6rem; }
-
-.slide-dots {
-  position: absolute;
-  bottom: 0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  transition: background var(--transition);
-}
-
-.dot.active {
-  background: var(--accent-light);
 }
 
 /* ===== Work content (text side) ===== */
@@ -426,17 +346,6 @@ section {
 
 .work-card:hover .work-link-icon {
   color: var(--accent-light);
-}
-
-/* Per-slide caption — fixed height so layout doesn't shift */
-.slide-caption {
-  font-size: 0.9rem;
-  color: var(--accent-light);
-  line-height: 1.6;
-  height: 4.8em;
-  overflow: hidden;
-  border-left: 3px solid var(--accent);
-  padding-left: 0.75rem;
 }
 
 .work-details {
@@ -553,54 +462,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* ===== Lightbox ===== */
-#lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.88);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
-
-#lightbox.open {
-  display: flex;
-}
-
-#lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-  cursor: default;
-}
-
-#lightbox-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: rgba(255, 255, 255, 0.12);
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background var(--transition);
-  z-index: 1001;
-}
-
-#lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.28);
-}
-
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -631,25 +492,6 @@ footer {
 
   section {
     padding: 4rem 0;
-  }
-
-  /* Works: stack image above content on mobile */
-  .work-card {
-    grid-template-columns: 1fr;
-  }
-
-  .work-media {
-    height: 220px;
-  }
-
-  .work-media .slide-img,
-  .work-media .slide-image {
-    max-height: 220px;
-  }
-
-  .slide-caption {
-    height: auto;
-    min-height: 4.8em;
   }
 }
 
